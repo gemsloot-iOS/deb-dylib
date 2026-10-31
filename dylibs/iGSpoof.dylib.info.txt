@@ -1,0 +1,25 @@
+=== lipo -info ===
+Non-fat file: /Users/runner/work/deb-dylib/deb-dylib/dylibs/iGSpoof.dylib is architecture: arm64
+
+=== otool -L ===
+/Users/runner/work/deb-dylib/deb-dylib/dylibs/iGSpoof.dylib:
+	@rpath/iGSpoof.dylib (compatibility version 0.0.0, current version 0.0.0)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+	/System/Library/Frameworks/Foundation.framework/Foundation (compatibility version 300.0.0, current version 4201.0.0)
+	/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation (compatibility version 150.0.0, current version 4201.0.0)
+	/usr/lib/libMobileGestalt.dylib (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/UIKit.framework/UIKit (compatibility version 1.0.0, current version 9126.2.4)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)
+	@rpath/CydiaSubstrate.framework/CydiaSubstrate (compatibility version 0.0.0, current version 0.0.0)
+
+=== codesign -dv ===
+Executable=/Users/runner/work/deb-dylib/deb-dylib/dylibs/iGSpoof.dylib
+Identifier=iGSpoof-55554944595e7c612fb23fdbae8facbf5b2040fe
+Format=Mach-O thin (arm64)
+CodeDirectory v=20400 size=777 flags=0x2(adhoc) hashes=18+2 location=embedded
+Signature=adhoc
+Info.plist=not bound
+TeamIdentifier=not set
+Sealed Resources=none
+Internal requirements count=0 size=12

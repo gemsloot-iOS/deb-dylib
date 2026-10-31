@@ -1,0 +1,20 @@
+=== lipo -info ===
+Non-fat file: /Users/runner/work/deb-dylib/deb-dylib/dylibs/libkernrw.0.dylib is architecture: arm64
+
+=== otool -L ===
+/Users/runner/work/deb-dylib/deb-dylib/dylibs/libkernrw.0.dylib:
+	@rpath/libkernrw.0.dylib (compatibility version 0.0.0, current version 0.0.0)
+	/System/Library/Frameworks/Foundation.framework/Foundation (compatibility version 300.0.0, current version 1856.105.0)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1311.0.0)
+
+=== codesign -dv ===
+Executable=/Users/runner/work/deb-dylib/deb-dylib/dylibs/libkernrw.0.dylib
+Identifier=libkernrw.0
+Format=Mach-O thin (arm64)
+CodeDirectory v=20400 size=580 flags=0x2(adhoc) hashes=13+2 location=embedded
+Signature=adhoc
+Info.plist=not bound
+TeamIdentifier=not set
+Sealed Resources=none
+Internal requirements count=0 size=12

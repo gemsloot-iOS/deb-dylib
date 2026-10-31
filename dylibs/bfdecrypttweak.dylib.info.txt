@@ -1,0 +1,25 @@
+=== lipo -info ===
+Non-fat file: /Users/runner/work/deb-dylib/deb-dylib/dylibs/bfdecrypttweak.dylib is architecture: arm64
+
+=== otool -L ===
+/Users/runner/work/deb-dylib/deb-dylib/dylibs/bfdecrypttweak.dylib:
+	@rpath/bfdecrypttweak.dylib (compatibility version 0.0.0, current version 0.0.0)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+	/System/Library/Frameworks/Foundation.framework/Foundation (compatibility version 300.0.0, current version 4201.0.0)
+	/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation (compatibility version 150.0.0, current version 4201.0.0)
+	/System/Library/Frameworks/UIKit.framework/UIKit (compatibility version 1.0.0, current version 9126.2.4)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)
+	/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics (compatibility version 64.0.0, current version 1965.2.3)
+	/System/Library/Frameworks/QuartzCore.framework/QuartzCore (compatibility version 1.2.0, current version 1193.47.2)
+
+=== codesign -dv ===
+Executable=/Users/runner/work/deb-dylib/deb-dylib/dylibs/bfdecrypttweak.dylib
+Identifier=bfdecrypttweak-55554944f01fae0dd64a37b0b8d30a6e9761239f
+Format=Mach-O thin (arm64)
+CodeDirectory v=20400 size=1072 flags=0x2(adhoc) hashes=27+2 location=embedded
+Signature=adhoc
+Info.plist=not bound
+TeamIdentifier=not set
+Sealed Resources=none
+Internal requirements count=0 size=12

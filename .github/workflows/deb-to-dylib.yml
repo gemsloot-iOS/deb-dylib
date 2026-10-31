@@ -1,0 +1,49 @@
+name: deb-to-dylib
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "**.deb"
+      - "scripts/**"
+      - ".github/workflows/deb-to-dylib.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install extraction & signing utilities
+        run: brew install xz zstd ldid
+
+      - name: Run converter script
+        run: bash scripts/convert_debs.sh
+
+      - name: Upload extracted dylibs
+        uses: actions/upload-artifact@v4
+        with:
+          name: extracted-ios-dylibs
+          path: dylibs/
+          if-no-files-found: warn
+
+      - name: Commit & push extracted dylibs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dylibs/*
+          if git status --porcelain | grep -q .; then
+            git commit -m "chore: auto-convert .deb packages to arm64 .dylib [skip ci]"
+            git push
+          else
+            echo "No dylib changes to commit."
+          fi

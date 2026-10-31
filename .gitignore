@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary extraction / build dirs
+tmp/
+build/
+payload/
+*.tmp
+*.temp
+
+# Editor / swap files
+*~
+*.swp
+*.swo
+*.bak
+.idea/
+.vscode/
+
+# Keep package inputs and converted outputs trackable
+!debs/
+!debs/**
+!debs/*.deb
+!dylibs/
+!dylibs/**
+!dylibs/*.dylib
+!dylibs/*.info.txt
